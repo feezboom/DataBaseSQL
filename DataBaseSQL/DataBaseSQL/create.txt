@@ -1,0 +1,24 @@
+create table if not exists FederalAreas
+(
+	FAID int primary key,
+	name varchar(40)
+);
+create table if not exists Regions
+(
+	name VARCHAR(40),
+	population BIG INTEGER,
+	area BIG INTEGER,
+	NumOfCities INTEGER,
+	RID INTEGER,
+	FAID INTEGER
+		
+);
+create table if not exists Cities
+(
+	region VARCHAR(40),
+	population BIG INTEGER,
+	area BIG INTEGER,
+	mayor VARCHAR(40),
+	based INTEGER,
+	RID INTEGER
+);
