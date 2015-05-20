@@ -1,24 +1,52 @@
-create table if not exists FederalAreas
+CREATE TABLE IF NOT EXISTS Products
 (
-	FAID int primary key,
-	name varchar(40)
+	ID integer primary key,
+	ProductName varchar(40)
 );
-create table if not exists Regions
+CREATE TABLE IF NOT EXISTS DishComposition
 (
-	name VARCHAR(40),
-	population BIG INTEGER,
-	area BIG INTEGER,
-	NumOfCities INTEGER,
-	RID INTEGER,
-	FAID INTEGER
-		
+	DishID integer,
+	ProductID integer,
+	Quantity integer,
+	foreign key (DishID) references Dishes(ID),
+	foreign key (ProductID) references Products(ID)
 );
-create table if not exists Cities
+CREATE TABLE IF NOT EXISTS Dishes
 (
-	region VARCHAR(40),
-	population BIG INTEGER,
-	area BIG INTEGER,
-	mayor VARCHAR(40),
-	based INTEGER,
-	RID INTEGER
+	ID integer primary key, 
+	DishName varchar(4),
+	Price integer
+);
+CREATE TABLE IF NOT EXISTS OrderComposition
+(
+	OrderNumber integer primary key autoincrement,
+	OrderID integer,
+	DishID integer,
+	foreign key (DishID) references Dishes(ID),
+	foreign key (OrderID) references Orders(ID)
+);
+CREATE TABLE IF NOT EXISTS Orders
+(
+	ID integer primary key autoincrement,
+	Date varchar(10),
+	Time varchar(5),
+	TableID integer,
+	ServantID integer,
+	Performed varchar(3),
+	Price integer,
+	Discount integer,
+	PriceWithDiscount integer,
+	Paid varchar(3),
+	foreign key (TableID) references Tables(ID),
+	foreign key (ServantID) references Workers(ID)
+);
+CREATE TABLE IF NOT EXISTS Workers
+(
+	ID integer primary key autoincrement,
+	FullName varchar(60)
+);
+CREATE TABLE IF NOT EXISTS Tables
+(
+	ID integer primary key autoincrement,
+	Description varchar(200)
 );
