@@ -1,0 +1,6 @@
+select workers.fullname
+from 
+tables
+inner join orders on tables.id = orders.tableid
+inner join workers on orders.servantid = workers.id
+where orders.tableid = 5

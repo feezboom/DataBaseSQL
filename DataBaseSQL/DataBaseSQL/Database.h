@@ -1,3 +1,6 @@
+#ifndef _DATABASE_H
+#define _DATABASE_H
+
 #define kb 1024
 #define mb kb*1024
 #define MAX_STRING_SIZE 32*kb
@@ -15,3 +18,5 @@ bool;
 
 int Processing();
 int PerformQueries();
+
+#endif

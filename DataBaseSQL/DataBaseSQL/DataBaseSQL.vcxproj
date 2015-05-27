@@ -64,7 +64,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="example.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Processing.c" />
     <ClCompile Include="sqlite3.c" />
@@ -74,8 +73,6 @@
     <ClInclude Include="sqlite3.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\..\..\..\Downloads\Creating.txt" />
-    <Text Include="..\..\..\..\..\..\..\Downloads\Filling.txt" />
     <Text Include="create.txt" />
     <Text Include="fill.txt" />
   </ItemGroup>

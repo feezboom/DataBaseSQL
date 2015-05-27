@@ -12,18 +12,12 @@
     <Filter Include="Запросы">
       <UniqueIdentifier>{dacc0046-3a7c-49e0-b5d8-438c08e4fac0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Примеры">
-      <UniqueIdentifier>{358d153c-9403-46ef-bfb1-b02af5342710}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sqlite3.c">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="Processing.c">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="example.c">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="main.c">
@@ -44,12 +38,6 @@
     </Text>
     <Text Include="fill.txt">
       <Filter>Запросы</Filter>
-    </Text>
-    <Text Include="..\..\..\..\..\..\..\Downloads\Creating.txt">
-      <Filter>Примеры</Filter>
-    </Text>
-    <Text Include="..\..\..\..\..\..\..\Downloads\Filling.txt">
-      <Filter>Примеры</Filter>
     </Text>
   </ItemGroup>
 </Project>
