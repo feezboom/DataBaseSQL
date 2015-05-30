@@ -70,7 +70,6 @@ int InsertIntoWorkers(sqlite3 *MyBase, char* Worker)
 
 	return 0;
 }
-
 void PrintHelp()
 {
 	printf("Here you can type your commands:\n");
@@ -82,7 +81,6 @@ void PrintHelp()
 	printf(" - '1 [worker name]' to add new worker\n");
 	printf(" - '--help' to show this message again\n");
 }
-
 int Processing()
 {
 	char Queries[MAX_STRING_SIZE];
